@@ -38,6 +38,9 @@ def parse_request():
     print(available_stores)
     if len(available_stores) > 0:
         send_message("iPhone 13 dispo ! \n" + "\n".join(available_stores))
+        return
+    print('Not available')
+
 
 
 if __name__ == '__main__':
