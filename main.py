@@ -21,7 +21,7 @@ def send_message(text: str):
 
 def parse_request():
     res = requests.get(
-        'https://www.apple.com/shop/fulfillment-messages?pl=true&cppart=UNLOCKED/US&parts.0=MLML3LL/A&location=94609')
+        'https://www.apple.com/shop/fulfillment-messages?pl=true&cppart=UNLOCKED/US&parts.0=MLN13LL/A&location=94710')
 
     if not res.ok or not res.json()['head'] or res.json()['head']['status'] != '200':
         send_message(f'API Blocked request: {res.status_code}')
@@ -40,7 +40,6 @@ def parse_request():
         send_message("iPhone 13 dispo ! \n" + "\n".join(available_stores))
         return
     print('Not available')
-
 
 
 if __name__ == '__main__':
