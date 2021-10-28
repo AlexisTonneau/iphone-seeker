@@ -32,7 +32,7 @@ def parse_request():
     available_stores = []
 
     for store in stores:
-        if store['storeNumber'] in stores_here and store['partsAvailability']['MLML3LL/A'][
+        if store['storeNumber'] in stores_here and store['partsAvailability']['MLN13LL/A'][
             'pickupDisplay'] == 'available':
             available_stores.append(store['address']['address'])
     print(available_stores)
